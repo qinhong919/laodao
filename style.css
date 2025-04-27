@@ -90,6 +90,18 @@ h1, h2, h3 {
   100% { background-position: center bottom; }
 }
 
+/* 导师头像样式 */
+.mentor-photo {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #C0A060;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 /* 页脚样式 */
 footer {
   text-align: center;
