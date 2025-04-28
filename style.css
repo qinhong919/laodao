@@ -77,7 +77,13 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #e0dff5; /* 浅紫色圆框，更柔和 */
+  background: #fff; /* 防止有奇怪的背景透出 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 轻微阴影，立体感 */
+  display: block;
   margin: 20px auto;
+}
   display: block;
 }
 
