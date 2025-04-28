@@ -2,39 +2,85 @@
 body {
   margin: 0;
   font-family: "Noto Serif SC", "宋体", serif;
-  background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+  background: linear-gradient(to bottom, #d0c7ff, #f0efff);
   color: #333;
+  overflow-x: hidden;
 }
 
 #energy-background {
-  background: url('beidou-stars.jpg') no-repeat center center/cover;
+  background: url('beidou-stars.jpg') repeat-x center center;
   position: fixed;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 200%;
   height: 100%;
   z-index: -1;
-  opacity: 0.3;
-  animation: flow 60s infinite linear;
+  animation: cloudFlow 120s linear infinite;
+  opacity: 0.25;
 }
 
-@keyframes flow {
-  0% { background-position: 0 0; }
-  100% { background-position: 10000px 0; }
+@keyframes cloudFlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-#beidouxuangong {
-  background: linear-gradient(to bottom right, #f3e7e9, #e3eeff);
-  padding: 60px 20px;
-  overflow: hidden;
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: transparent;
+  color: #fff;
 }
 
-.beidouxuangong-content {
-  max-width: 900px;
-  margin: auto;
-  animation: fadeInUp 2s ease-out forwards;
-  opacity: 0;
+h1, h2, h3 {
+  font-weight: bold;
+  color: #5a4ea3;
 }
 
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(50px); }
-  100% { opacity: 1; transform: translateY(0); }
+ul.course-list, ul.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+ul li {
+  padding: 10px 0;
+  font-size: 1.2em;
+}
+
+.btn-group .btn {
+  background: #8c7b75;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #6f5f59;
+}
+
+/* 能量光圈特效 */
+.energy-glow {
+  background: radial-gradient(circle at center, rgba(255, 228, 250, 0.4) 0%, transparent 70%);
+  background-size: 150% 150%;
+  animation: energyPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes energyPulse {
+  0% {
+    background-size: 140% 140%;
+    opacity: 0.8;
+  }
+  100% {
+    background-size: 160% 160%;
+    opacity: 1;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 20px;
+  color: #aaa;
 }
