@@ -90,18 +90,43 @@ h1, h2, h3 {
   100% { background-position: center bottom; }
 }
 
-/* 导师头像样式 */
+/* 导师头像样式优化版 */
 .mentor-photo {
   display: block;
-  margin: 0 auto 1rem auto;
-  width: 150px;
-  height: 150px;
+  margin: 2rem auto 1rem auto;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #C0A060;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 4px solid #C0A060;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease-in-out;
 }
 
+.mentor-photo:hover {
+  transform: scale(1.05); /* 鼠标悬浮微微放大，灵动感 */
+}
+
+/* 能量流动背景升级版 */
+#energy-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 30%, rgba(255, 120, 140, 0.2) 0%, rgba(153, 102, 255, 0.2) 40%, transparent 80%);
+  background-size: 200% 100%;
+  animation: flow 40s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 /* 二维码样式 */
 .qrcode {
   display: block;
