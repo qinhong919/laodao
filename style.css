@@ -1,38 +1,47 @@
-
 body {
   margin: 0;
   font-family: "Noto Serif SC", "宋体", serif;
-  background: linear-gradient(to bottom, #d0c7ff, #f0efff);
+  background: linear-gradient(to bottom, #e0dff5, #f6f9ff);
   color: #333;
   overflow-x: hidden;
 }
 
+/* 星空背景流动 */
 #energy-background {
-  background: url('beidou-stars.jpg') repeat-x center center / cover;
+  background: url('beidou-stars.jpg') repeat-x center center / contain;
   position: fixed;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 300%;
   height: 100%;
   z-index: -1;
-  animation: cloudMove 150s linear infinite;
-  opacity: 0.3;
+  animation: cloudMove 90s linear infinite;
+  opacity: 0.25;
 }
 
 @keyframes cloudMove {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-33%); }
+}
+
+/* 标准容器对齐 */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
 }
 
 .hero {
   text-align: center;
-  padding: 100px 20px 60px;
+  padding: 80px 20px 40px;
   background: transparent;
   color: #5a4ea3;
 }
 
 h1, h2, h3 {
   font-weight: bold;
+  margin: 20px 0 10px;
 }
 
 ul.course-list, ul.benefits-list {
@@ -60,44 +69,31 @@ ul li {
   background: #6f5f59;
 }
 
-/* 能量光圈特效 */
+/* 北斗玄功模块：能量光圈加强 */
 .energy-glow {
-  background: radial-gradient(circle at center, rgba(255, 240, 250, 0.35) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(230, 210, 255, 0.5) 0%, transparent 70%);
   background-size: 150% 150%;
-  animation: glowPulse 8s ease-in-out infinite alternate;
+  animation: glowPulse 6s ease-in-out infinite alternate;
 }
 
 @keyframes glowPulse {
-  0% {
-    background-size: 140% 140%;
-    opacity: 0.7;
-  }
-  100% {
-    background-size: 160% 160%;
-    opacity: 1;
-  }
+  0% { background-size: 140% 140%; opacity: 0.8; }
+  100% { background-size: 160% 160%; opacity: 1; }
 }
 
-footer {
-  text-align: center;
-  font-size: 0.9em;
-  padding: 20px;
-  color: #aaa;
+/* 联系二维码 */
+.qrcode {
+  width: 200px;
+  margin: 20px auto;
 }
 
-/* 手机自适应 */
+/* 手机端优化 */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-  p, li {
-    font-size: 1em;
-  }
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.6em; }
+  p, li { font-size: 1em; }
   .btn-group .btn {
-    padding: 10px 20px;
-    font-size: 0.9em;
+    padding: 10px 18px;
+    font-size: 0.95em;
   }
 }
