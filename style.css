@@ -45,7 +45,7 @@ h1, h2, h3 {
   color: white;
 }
 
-/* 卡片布局（学习与探索模块） */
+/* 卡片布局 */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -100,6 +100,13 @@ h1, h2, h3 {
   border-radius: 50%;
   border: 3px solid #C0A060;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 二维码样式 */
+.qrcode {
+  display: block;
+  margin: 2rem auto;
+  width: 200px;
 }
 
 /* 页脚样式 */
