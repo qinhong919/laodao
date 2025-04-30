@@ -1,157 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <script src="energy-background.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- ✅ 网站标题（搜索标题） -->
-  <title>道行无极｜北斗玄功修行 · 祝由术 · 能量养生 · 五行调理</title>
-
-  <!-- ✅ 网站描述（搜索摘要） -->
-  <meta name="description" content="道行无极 · 北斗玄功修行平台，传承道家无极门功法，融合祝由术、五行调理、能量坐功动功。线上修行+社群支持，助你激活纯阳之气，走上身心合一之道。">
-
-  <!-- ✅ 网站关键词 -->
-  <meta name="keywords" content="北斗玄功, 道家修行, 五行调理, 能量养生, 祝由术, 无极门, 覃宏, 纯阳功, 道行无极, 中医气功, 精气神, 情绪管理, 健康自愈">
-
-  <!-- ✅ 社交媒体分享预览优化 -->
-  <meta property="og:title" content="道行无极｜北斗玄功修行平台">
-  <meta property="og:description" content="融合北斗玄功、祝由术、五行调理等道家智慧，帮助你唤醒身体内在能量。">
-  <meta property="og:image" content="https://你的域名/logo.png"> <!-- 替换为你的实际LOGO路径 -->
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>道行无极｜北斗玄功修行平台</title>
+  <meta name="description" content="北斗玄功修行平台，传承无极门，融合祝由术与五行调理，助你身心平衡、纯阳回归。">
+  <meta name="keywords" content="北斗玄功,祝由术,能量调理,道家功法,无极门,修行平台,自愈力">
+  <link rel="stylesheet" href="style.css">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 </head>
+
 <body>
-<div id="energy-background"></div>
+  <header class="hero">
+    <h1>道行无极</h1>
+    <p>融合道家功法·唤醒纯阳之气</p>
+    <div class="btn-group">
+      <a href="#intro" class="btn">了解北斗玄功</a>
+      <a href="#free" class="btn">领取能量资源</a>
+      <a href="#contact" class="btn">加入社群修行</a>
+    </div>
+  </header>
 
-<header class="hero container">
-  <h1>道行无极</h1>
-  <p>观天之道，执天之行</p>
-  <div class="btn-group">
-    <a href="#course" class="btn">查看课程</a>
-    <a href="#history" class="btn">了解北斗玄功</a>
-    <a href="#contact" class="btn">立即预约</a>
-  </div>
-</header>
+  <section id="intro" class="section">
+    <h2>什么是北斗玄功？</h2>
+    <p>北斗玄功源自道教无极门，是一种融合静坐、观想、呼吸与意念引导的能量修炼体系，核心为“功玄合一”，通过调理经络与气场，激活人体纯阳之气。</p>
+  </section>
 
-<section id="mentor" class="container">
-  <h2>导师简介</h2>
-  <img src="mentor.jpg" alt="导师头像" class="mentor-photo">
-  <p><strong>老道~覃宏</strong></p>
-  <p>
-    云南中华周易研究会副会长、秘书长（原）<br>
-    昆明易经研究会副会长、秘书长（原）<br>
-    中国医学气功学会会员<br>
-    国家健身气功指导员<br>
-    道家北斗玄功传人<br>
-    中医祝由传承人
-  </p>
-</section>
+  <section id="free" class="section alt">
+    <h2>免费领取 · 能量资源</h2>
+    <p>填写表单或扫码，即可领取祝由术电子小册、五行调理卡片。</p>
+    <img src="qrcode.png" alt="微信扫码" class="qrcode">
+  </section>
 
-<section id="gain" class="container">
-  <h2>你将收获</h2>
-  <ul class="course-list">
-    <li>🧘 提升能量场：调理五行气场，增强身体自愈能力</li>
-    <li>🧠 情绪管理：化解内耗，改善睡眠与精神状态</li>
-    <li>🔮 命理觉知：看清趋势，找到你的适配模式与节奏</li>
-    <li>🪄 落地术法：动功+坐功+祝由术组合，打造自我修复系统</li>
-  </ul>
-</section>
+  <section id="contact" class="section">
+    <h2>加入社群 · 共同修行</h2>
+    <p>添加微信客服，进入「道行无极」修行群，开启你的纯阳之路。</p>
+    <a href="https://你的预约链接" class="btn">👉 进入预约引导页</a>
+  </section>
 
-<section id="learning" class="container">
-  <h2 class="section-title">学习与探索</h2>
-  <div class="card-grid">
-    <a href="zhuyou.html" class="card">
-      <h3>祝由文化</h3>
-      <p>探寻祝由术的起源与身心调理智慧。</p>
-    </a>
-    <a href="energy.html" class="card">
-      <h3>能量调理</h3>
-      <p>学习能量共振与自我修复之道。</p>
-    </a>
-    <a href="health.html" class="card">
-      <h3>传统养生法</h3>
-      <p>八段锦、易筋经等古法健身的现代应用。</p>
-    </a>
-    <a href="mind.html" class="card">
-      <h3>心灵成长分享</h3>
-      <p>情绪平衡与正念修习，提升内在力量。</p>
-    </a>
-    <a href="story.html" class="card">
-      <h3>用户故事</h3>
-      <p>真实案例分享，见证能量转变奇迹。</p>
-    </a>
-    <a href="resource.html" class="card">
-      <h3>免费资源</h3>
-      <p>领取祝由文化电子册与能量调理卡片。</p>
-    </a>
-  </div>
-</section>
-
-<section id="course" class="container">
-  <h2>课程体系</h2>
-  <ul class="course-list">
-    <li><strong>初阶课程：</strong>五行基础、命理入门、数字能量启蒙</li>
-    <li><strong>进阶课程：</strong>风水布局、命盘实战、能量优化术</li>
-    <li><strong>特训营：</strong>实操案例解析、直播问答、学员训练营</li>
-  </ul>
-</section>
-
-<section id="history" class="container energy-glow">
-  <h2 class="section-title">北斗玄功 · 历史背景</h2>
-  <div class="text-block">
-    <p>北斗玄功，源承道教北斗信仰体系，主张内应星辰、外契天地，强调修行者通过与北斗星系能量的内在共振，调和身心，通达自然，返本归真。</p>
-    <p>在道教体系中，北斗星君掌寿命命数，其修炼之道，讲究内炼精气神，外应天星地煞，动静结合，法天象地。</p>
-    <p>北斗玄功的修持，融合了静坐、呼吸、意守、观想与动态导引之法，堪称"身心能量重构之道"，引领修行者在浩瀚宇宙中，重塑自身能量场，体悟天地大道。</p>
-    <p>玄功渊源，可追溯至明末清初，岷山无极门。此门派历代只以口传心授秘而不宣，未有文字流传，故弥漫着浓厚神秘色彩。</p>
-    <p>门派开山祖师，相传为吕四娘。因家族蒙难于雍正朝，吕氏遂遁入修行，拜师学艺，终于以高深道法成就复仇夙愿，成为无极门的传奇人物。</p>
-    <p>北斗玄功自吕四娘一脉相承，至第十代掌门人杨崇辛之手传入云南，功法得以广布发展。</p>
-    <p>北斗玄功的核心精神，倡导"功玄合一"，通过调理脏腑经络之气，炼就纯阳之体，逆转后天浊气，返还先天真元，最终达到延年益寿、长生久视之境。</p>
-    <p>清代第八代祖师马乾隆、第九代祖师朱礼仙，皆对玄功体系加以完善与光大。朱礼仙晚年隐居云南昭通，将无极门功法广授于武术界，尤以弟子杨崇辛为最。</p>
-    <p>杨崇辛身兼武术宗师、抗日义士与民间良医于一身，其生平亦成为北斗玄功传奇传承的重要篇章。</p>
-    <p>至上世纪八十年代，第十一代掌门张成兴，结合现代医学理念，公开推广北斗玄功，将此门古法推向更广阔的天地，造福无数学人。</p>
-    <p>今日之北斗玄功，已在昆明及海内外广泛流传，门下弟子众多，薪火不断，续写着道脉长青的宏伟篇章。</p>
-  </div>
-</section>
-
-<section id="cases" class="container">
-  <h2>真实案例分享</h2>
-  <div class="case-item">
-    <h3>🌟 白领A</h3>
-    <p>状态低迷，财运卡壳 → 调整个人五行+办公风水 → 收入提升30%</p>
-  </div>
-  <div class="case-item">
-    <h3>🌿 医生B</h3>
-    <p>长期失眠、情绪波动 → 命盘分析+坐功调理 → 3周恢复元气</p>
-  </div>
-  <div class="case-item">
-    <h3>🏢 企业家C</h3>
-    <p>战略混乱、决策焦虑 → 八字策划+风水改局 → 破局腾飞</p>
-  </div>
-</section>
-
-<section id="video" class="container">
-  <h2 class="section-title">推荐视频 · 案例实录</h2>
-  <div style="text-align: center;">
-    <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114373133603450&bvid=BV1nTLMzyE9e&cid=29527051533&p=1" 
-    scrolling="no" border="0" frameborder="no" allowfullscreen="true"
-    style="width:100%; max-width:800px; height:450px; border-radius:12px;">
-    </iframe>
-  </div>
-</section>
-
-<section id="contact" class="container">
-  <h2>扫码咨询 · 免费预约</h2>
-  <p>扫码添加微信，或点击下方按钮进入预约界面</p>
-  <img src="qrcode.png" alt="微信二维码" class="qrcode" />
-  <div style="margin-top: 20px;">
-    <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxc93d6f8352303d7b&redirect_uri=http%3A%2F%2Fwxauth.shangshangke.me%2Fjhcqk.sycdtz.com%2F3w476707fb3860f50a6142903280ed8c6ff83ff80f481a1b43%3FshareOrigin%3Dtimeline&response_type=code&scope=snsapi_base&state=snsapi_base&forcePopup=false&forceSnapShot=false&connect_redirect=1#wechat_redirect" target="_blank" class="btn">👉 点我进入微信预约</a>
-  </div>
-</section>
-
-<footer class="container">
-  <p>© 2025 道行无极 · 本页仅作文化科普用途，不提供医疗承诺</p>
-</footer>
-
+  <footer>
+    <p>© 2025 道行无极 · 本页仅作传统文化交流使用</p>
+  </footer>
 </body>
 </html>
