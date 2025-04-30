@@ -1,49 +1,123 @@
-
+/* 全局基础样式 */
 body {
-  font-family: 'Noto Serif SC', serif;
-  margin: 0;
-  padding: 0;
   background: linear-gradient(to bottom right, #fefcf9, #f4f0e6);
+  font-family: 'Noto Serif SC', serif;
   color: #333;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
-h1, h2 {
+
+/* 标题字体 */
+h1, h2, h3 {
   font-family: 'Ma Shan Zheng', cursive;
   color: #4A8FB7;
+  margin: 1rem 0;
   text-align: center;
 }
+
+/* 按钮组 */
+.btn-group {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-block;
+  border: 2px solid #C0A060;
+  color: #4A8FB7;
+  background: transparent;
+  border-radius: 30px;
+  padding: .75rem 1.5rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin: 0.5rem;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+.btn:hover {
+  background: #C0A060;
+  color: white;
+}
+
+/* 英雄区 */
 .hero {
   text-align: center;
   padding: 3rem 1rem 2rem;
 }
-.btn-group {
-  margin-top: 2rem;
-}
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  background-color: #C0A060;
-  color: white;
-  text-decoration: none;
-  margin: 0.5rem;
-}
+
+/* 模块内容区 */
 .section {
   padding: 2rem 1rem;
   max-width: 800px;
   margin: auto;
 }
-.alt {
-  background-color: #fffaf0;
+.section.alt {
+  background-color: #fffaf2;
 }
+
+/* 导师头像样式 */
+.mentor-photo {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #C0A060;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 二维码样式 */
 .qrcode {
   display: block;
-  margin: 1rem auto;
+  margin: 2rem auto;
   width: 180px;
 }
+
+/* 视频模块 iframe */
+iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 12px;
+}
+
+/* 页脚样式 */
 footer {
   text-align: center;
-  padding: 2rem 1rem;
   font-size: 0.9rem;
-  color: #666;
+  padding: 2rem 1rem;
+  color: #777;
+  background: rgba(255,255,255,0.6);
+  margin-top: 4rem;
+}
+
+/* 小屏幕适配优化 */
+@media (max-width: 768px) {
+  .btn {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .section {
+    padding: 1rem;
+  }
+  iframe {
+    height: 300px;
+  }
 }
