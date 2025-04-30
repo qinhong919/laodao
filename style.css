@@ -1,6 +1,6 @@
 /* 全局基础样式 */
 body {
-  background: linear-gradient(to bottom right, #fefcf9, #f4f0e6);
+  background: linear-gradient(to bottom right, #fefcf9, #f5f2eb);
   font-family: 'Noto Serif SC', serif;
   color: #333;
   line-height: 1.6;
@@ -29,12 +29,13 @@ h1, h2, h3 {
   color: #4A8FB7;
   background: transparent;
   border-radius: 30px;
-  padding: .75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   font-size: 1.1rem;
   text-decoration: none;
   margin: 0.5rem;
   transition: background 0.3s, color 0.3s, border 0.3s;
 }
+
 .btn:hover {
   background: #C0A060;
   color: white;
@@ -47,11 +48,13 @@ h1, h2, h3 {
 }
 
 /* 模块内容区 */
+.container,
 .section {
   padding: 2rem 1rem;
   max-width: 800px;
   margin: auto;
 }
+
 .section.alt {
   background-color: #fffaf2;
 }
@@ -65,7 +68,7 @@ h1, h2, h3 {
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #C0A060;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* 二维码样式 */
@@ -75,12 +78,13 @@ h1, h2, h3 {
   width: 180px;
 }
 
-/* 视频模块 iframe */
+/* 视频模块 iframe 样式 */
 iframe {
   width: 100%;
   max-width: 800px;
   height: 450px;
   border-radius: 12px;
+  border: none;
 }
 
 /* 页脚样式 */
@@ -89,7 +93,7 @@ footer {
   font-size: 0.9rem;
   padding: 2rem 1rem;
   color: #777;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   margin-top: 4rem;
 }
 
@@ -102,22 +106,32 @@ footer {
     font-size: 1rem;
     padding: 1rem;
   }
+
   h1 {
     font-size: 2.2rem;
   }
+
   h2 {
     font-size: 1.6rem;
   }
+
   h3 {
     font-size: 1.3rem;
   }
+
   .hero {
     padding: 2rem 1rem;
   }
+
   .section {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
   }
+
   iframe {
     height: 300px;
+  }
+
+  .qrcode {
+    width: 140px;
   }
 }
