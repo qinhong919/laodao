@@ -1,137 +1,263 @@
-/* 全局基础样式 */
+:root {
+  --ink: #182018;
+  --muted: #667062;
+  --paper: #fffaf0;
+  --deep: #143a2d;
+  --green: #2f6b43;
+  --gold: #b99655;
+  --line: #dfd4bd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: linear-gradient(to bottom right, #fefcf9, #f5f2eb);
-  font-family: 'Noto Serif SC', serif;
-  color: #333;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
+  color: var(--ink);
+  font-family: "Songti SC", "Noto Serif SC", "Times New Roman", serif;
+  line-height: 1.75;
+  background:
+    linear-gradient(rgba(20, 58, 45, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 58, 45, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 80% 0%, rgba(185, 150, 85, 0.18), transparent 34%),
+    #f3efe4;
+  background-size: 28px 28px, 28px 28px, 100% 760px, auto;
 }
 
-/* 标题字体 */
-h1, h2, h3 {
-  font-family: 'Ma Shan Zheng', cursive;
-  color: #4A8FB7;
-  margin: 1rem 0;
-  text-align: center;
+a {
+  color: inherit;
 }
 
-/* 按钮组 */
-.btn-group {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-/* 按钮样式 */
-.btn {
-  display: inline-block;
-  border: 2px solid #C0A060;
-  color: #4A8FB7;
-  background: transparent;
-  border-radius: 30px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-  text-decoration: none;
-  margin: 0.5rem;
-  transition: background 0.3s, color 0.3s, border 0.3s;
-}
-
-.btn:hover {
-  background: #C0A060;
-  color: white;
-}
-
-/* 英雄区 */
 .hero {
+  min-height: 72vh;
+  padding: 26px 24px 80px;
+  background:
+    linear-gradient(rgba(255, 250, 240, 0.84), rgba(255, 250, 240, 0.94)),
+    radial-gradient(circle at 18% 20%, rgba(47, 107, 67, 0.18), transparent 30%);
+  border-bottom: 4px solid var(--deep);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: 0 auto 90px;
+}
+
+.nav a {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--deep);
+  font-weight: 700;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
-  padding: 3rem 1rem 2rem;
 }
 
-/* 模块内容区 */
-.container,
+.eyebrow,
+.section-kicker {
+  color: var(--green);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  color: var(--deep);
+  font-size: clamp(58px, 12vw, 128px);
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  margin: 0 0 14px;
+  color: var(--deep);
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.25;
+}
+
+h3 {
+  margin: 0 0 8px;
+  color: var(--deep);
+  font-size: 23px;
+}
+
+.lead {
+  max-width: 700px;
+  margin: 22px auto 28px;
+  color: var(--muted);
+  font-size: 21px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  color: var(--deep);
+  text-decoration: none;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.btn.primary,
+.btn:hover {
+  color: #fff;
+  background: var(--deep);
+  border-color: var(--deep);
+}
+
 .section {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: auto;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 68px 24px;
 }
 
-.section.alt {
-  background-color: #fffaf2;
+.intro-grid,
+.two-column,
+.contact {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  align-items: start;
 }
 
-/* 导师头像样式 */
-.mentor-photo {
-  display: block;
-  margin: 0 auto 1rem auto;
-  width: 150px;
-  height: 150px;
+.portrait-card,
+.paper,
+.card,
+.timeline,
+.contact {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--paper), #fff);
+  box-shadow: 0 14px 36px rgba(20, 58, 45, 0.08);
+}
+
+.portrait-card {
+  padding: 28px;
+  text-align: center;
+}
+
+.portrait {
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #C0A060;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 4px solid var(--gold);
+  box-shadow: 0 10px 24px rgba(20, 58, 45, 0.18);
 }
 
-/* 二维码样式 */
+.paper {
+  padding: 32px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  padding: 24px;
+  border-left: 5px solid var(--green);
+}
+
+.timeline {
+  padding: 24px 28px;
+}
+
+.timeline p {
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline p:last-child {
+  border-bottom: 0;
+}
+
+.contact {
+  align-items: center;
+  grid-template-columns: 1fr 220px;
+}
+
 .qrcode {
-  display: block;
-  margin: 2rem auto;
   width: 180px;
+  justify-self: center;
+  border: 10px solid #fff;
+  box-shadow: 0 8px 24px rgba(20, 58, 45, 0.12);
 }
 
-/* 视频模块 iframe 样式 */
-iframe {
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
-  border-radius: 12px;
-  border: none;
-}
-
-/* 页脚样式 */
-footer {
+.footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 34px 24px 54px;
+  color: var(--muted);
   text-align: center;
-  font-size: 0.9rem;
-  padding: 2rem 1rem;
-  color: #777;
-  background: rgba(255, 255, 255, 0.6);
-  margin-top: 4rem;
 }
 
-/* 小屏幕适配优化 */
-@media (max-width: 768px) {
-  .btn {
-    display: block;
-    margin: 1rem auto;
-    width: 80%;
-    font-size: 1rem;
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
+@media (max-width: 820px) {
   .hero {
-    padding: 2rem 1rem;
+    min-height: auto;
+    padding-bottom: 54px;
+  }
+
+  .nav {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 54px;
+    padding-bottom: 8px;
+  }
+
+  .nav a {
+    white-space: nowrap;
+  }
+
+  .intro-grid,
+  .two-column,
+  .contact,
+  .cards {
+    grid-template-columns: 1fr;
   }
 
   .section {
-    padding: 1.5rem 1rem;
+    padding: 42px 16px;
   }
 
-  iframe {
-    height: 300px;
-  }
-
-  .qrcode {
-    width: 140px;
+  .portrait {
+    width: 180px;
+    height: 180px;
   }
 }
